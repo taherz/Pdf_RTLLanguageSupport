@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="SFPdf_RTLLanguageSupport.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SFPdf_RTLLanguageSupport"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <TextBlock Text="Syncfusion PDF RTL Language Support" Margin="0,0,0,100" Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center"/>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Choose Font Family:" HorizontalAlignment="Left" Margin="0,0,30,0" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <TextBlock Grid.Column="1" Text=":اختر نوع الخط" HorizontalAlignment="Right" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            </Grid>
+            <ComboBox x:Name="fontFamily" Margin="0,8" HorizontalContentAlignment="Center">
+                <ComboBoxItem Content="Segoeui" HorizontalAlignment="Stretch"/>
+                <ComboBoxItem Content="Arial" HorizontalAlignment="Stretch"/>
+                <ComboBoxItem Content="Andalus" HorizontalAlignment="Stretch"/>
+                <ComboBoxItem Content="Traditional Arabic" HorizontalAlignment="Stretch"/>
+            </ComboBox>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Enter Arabic Text:" HorizontalAlignment="Left" Margin="0,0,30,0" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <TextBlock Grid.Column="1" Text=":أدخل نصاً عربياً" HorizontalAlignment="Right" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            </Grid>
+            <!--<TextBox x:Name="TextToWriteInPDF" Height="100" Width="500" Margin="0,9.5,0,0" TextWrapping="Wrap" FlowDirection="RightToLeft"/>-->
+            <RichEditBox x:Name="TextToWriteInPDF" Height="100" Width="500" Margin="0,9.5,0,0" TextWrapping="Wrap" FlowDirection="RightToLeft"/>
+            <Button x:Name="GeneratePdf" Content="Generate PDF" HorizontalAlignment="Center" Margin="0,9.5,0,0" Click="GeneratePdf_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
