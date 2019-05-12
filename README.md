@@ -1,5 +1,6 @@
-# SFPdf_RTLLanguageSupport
-Support right-to-left (RTL) languages (Arabic) in Syncfusion PDF package in WinRT (also can be used in uwp)
+# Pdf_RTLLanguageSupport
+Support right-to-left (RTL) languages (Arabic) in PDF in UWP (Universal Windows Platform)
+- we used Syncfusion pdf lib in this example.
 
 ## Supported Language
 - Arabic
